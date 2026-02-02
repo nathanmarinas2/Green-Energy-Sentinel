@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Mariñas Pose"
+  given-names: "Nathan"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "Green Energy Sentinel: Optimal Wind Farm Placement using GIS"
+version: 1.0.0
+date-released: 2024-02-02
+url: "https://github.com/nathanmarinas2/green-energy-sentinel"
+preferred-citation:
+  type: software
+  authors:
+  - family-names: "Mariñas Pose"
+    given-names: "Nathan"
+  title: "Green Energy Sentinel: Optimal Wind Farm Placement using GIS + Lightning Risk Analysis"
+  year: 2024

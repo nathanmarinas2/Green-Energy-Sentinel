@@ -309,7 +309,7 @@ def create_premium_timelapse():
     m.get_root().html.add_child(folium.Element(legend_html))
 
     # Save
-    output_file = "maps/timelapse_premium_2023.html"
+    output_file = "maps/lightning_activity_timelapse.html"
     output_path = os.path.abspath(output_file)
     m.save(output_path)
     print(f"🎉 Premium animated timelapse saved to: {output_path}")

@@ -53,6 +53,10 @@ Where:
 - **$R(x,y)$**: Gaussian-smoothed lightning density normalized to $[0, 1]$.
 
 ### Data Sources
+
+![Global Wind Atlas Source](reports/global_wind_atlas_source.png)
+*Figure: Interface of the Global Wind Atlas 3.0 used for wind resource analysis.*
+
 | Source | Description | Format |
 |--------|-------------|--------|
 | [Global Wind Atlas 3.0](https://globalwindatlas.info/) | Mean Wind Speed at 100m height | GeoTIFF |
@@ -96,7 +100,7 @@ The algorithm identifies top candidate sites with wind speeds exceeding 10.5 m/s
 ```bash
 python src/optimal_placement.py
 ```
-Output will be generated in `maps/optimal_placement_real.html`.
+Output will be generated in `maps/wind_farm_suitability_map.html`.
 
 ---
 
@@ -105,17 +109,17 @@ Output will be generated in `maps/optimal_placement_real.html`.
 ### Wind Farm Suitability Map (Validated)
 Interactive heatmap showing the final suitability score across Galicia. Numerals indicate the Top 10 recommended sites, while small gray nodes represent existing turbines fetched via OSM for empirical validation.
 
-![Suitability Map](reports/posiciones_turbinas.png)
+![Suitability Map](reports/suitability_map_preview.png)
 
 ### 3D Spatial Density Analysis
 Large-scale 3D visualization of lightning strike intensity across the Iberian Peninsula, used to calibrate the risk surface for the local Galician model.
 
-![3D Lightning Visualization](reports/3D.png)
+![3D Lightning Visualization](reports/3d_risk_visualization.png)
 
 ### Historical Activity Calendar
 Temporal distribution of lightning strikes across 2023. This GitHub-style heatmap identifies peak storm seasons for maintenance scheduling and risk assessment.
 
-![Lightning Calendar 2023](reports/lightning_calendar_2023.png)
+![Lightning Calendar 2023](reports/temporal_activity_heatmap.png)
 
 ---
 
@@ -124,8 +128,14 @@ Temporal distribution of lightning strikes across 2023. This GitHub-style heatma
 ```text
 .
 ├── data/                       # Raw lightning strike datasets
-├── maps/                       # HTML Visualizations and exported maps
-├── reports/                    # Generated figures and CSVs
+├── maps/                       # HTML Interactive Visualizations
+│   ├── wind_farm_suitability_map.html
+│   ├── lightning_risk_3d_map.html
+│   └── lightning_activity_timelapse.html
+├── reports/                    # Generated Assets
+│   ├── suitability_map_preview.png
+│   ├── 3d_risk_visualization.png
+│   └── temporal_activity_heatmap.png
 ├── src/                        
 │   ├── optimal_placement.py    # Primary Suitability Algorithm
 │   ├── visualize_3d.py         # PyDeck 3D Rendering

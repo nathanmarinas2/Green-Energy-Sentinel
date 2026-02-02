@@ -12,7 +12,7 @@ import os
 
 # Configuration
 LIGHTNING_FILE = "data/strikes_2023.json"
-OUTPUT_FILE = "maps/lightning_3d_2023.html"
+OUTPUT_FILE = "maps/lightning_risk_3d_map.html"
 GALICIA_CENTER = {"lat": 42.7, "lon": -7.8} # Adjusted slightly for better view
 
 def create_3d_viz():

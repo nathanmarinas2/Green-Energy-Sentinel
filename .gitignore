@@ -1,19 +1,40 @@
 # Python
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
 venv/
+env/
+ENV/
 
-# Data (too large for GitHub)
-data/*.json
+# Jupyter Notebook
+.ipynb_checkpoints
 
-# Large map files (optional, uncomment if you want to exclude)
-# maps/*.html
-
-# IDE
+# VS Code
 .vscode/
-.idea/
 
-# OS
+# Large Data Files (Keep large GeoTIFFs out of repo if >100MB, otherwise track them)
+# maps/*.html
+# reports/*.png
+
+# OS generated files
 .DS_Store
 Thumbs.db

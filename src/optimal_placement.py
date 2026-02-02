@@ -22,7 +22,7 @@ import requests
 LIGHTNING_FILE = "data/strikes_2023.json"
 WIND_TIFF = "galicia_wind-speed_100m.tif"
 GALICIA_GEOJSON = "ESP.15_1.geojson"
-OUTPUT_MAP = "maps/optimal_placement_real.html"
+OUTPUT_MAP = "maps/wind_farm_suitability_map.html"
 
 GALICIA_BOUNDS = {
     "lat_min": 41.8, "lat_max": 43.8,
