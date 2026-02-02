@@ -3,6 +3,9 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![OpenData](https://img.shields.io/badge/Data-Global%20Wind%20Atlas-orange.svg)](https://globalwindatlas.info)
+[![Español](https://img.shields.io/badge/Idioma-Español-yellow.svg)](README_ES.md)
+
+> **[🇪🇸 Cambiar a Versión en Español](README_ES.md)**
 
 An analytical framework designed to identify optimal locations for wind turbine installation. The system evaluates geospatial data by cross-referencing high-resolution wind speed layers with a 12-month historical lightning strike dataset.
 
