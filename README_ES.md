@@ -45,6 +45,17 @@ El algoritmo genera un mapa de calor de idoneidad para la región de Galicia (Es
 
 ## Metodología Técnica
 
+```mermaid
+graph TD
+    A[Global Wind Atlas] -->|GeoTIFF| C{Normalización<br>Espacial}
+    B[Histórico Rayos] -->|Puntos Discretos| D[Superficie Riesgo<br>Gaussian KDE]
+    C --> E[Índice Idoneidad]
+    D --> E
+    F[Máscara GeoJSON] -->|Límites Tierra| E
+    E -->|Validación| G[OpenStreetMap<br>Turbinas]
+    G --> H[Mapa de Calor Final]
+```
+
 ### Cálculo del Índice de Idoneidad
 El índice final de idoneidad ($S$) para cada coordenada $(x,y)$ se calcula como:
 

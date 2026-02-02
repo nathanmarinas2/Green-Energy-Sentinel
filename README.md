@@ -46,6 +46,17 @@ The algorithm produces a suitability heatmap for the Galicia region (Spain), val
 
 ## Technical Methodology
 
+```mermaid
+graph TD
+    A[Global Wind Atlas] -->|GeoTIFF| C{Spatial Grid<br>Normalization}
+    B[Lightning History] -->|Strikes Points| D[Gaussian KDE<br>Risk Surface]
+    C --> E[Suitability Score]
+    D --> E
+    F[GeoJSON Mask] -->|Land Constraints| E
+    E -->|Validation| G[OpenStreetMap<br>Turbines]
+    G --> H[Final Heatmap]
+```
+
 ### Suitability Score Calculation
 The final suitability index ($S$) for each coordinate $(x,y)$ is calculated as:
 
