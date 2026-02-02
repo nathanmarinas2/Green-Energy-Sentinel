@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# Data (too large for GitHub)
+data/*.json
+
+# Large map files (optional, uncomment if you want to exclude)
+# maps/*.html
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

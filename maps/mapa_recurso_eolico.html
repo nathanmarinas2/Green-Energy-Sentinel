@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_155016a2c5649b757bf9153d8461c100 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_155016a2c5649b757bf9153d8461c100" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_155016a2c5649b757bf9153d8461c100 = L.map(
+                "map_155016a2c5649b757bf9153d8461c100",
+                {
+                    center: [43.0, -7.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_50faf8883b661d0181859864b816a714 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_50faf8883b661d0181859864b816a714.addTo(map_155016a2c5649b757bf9153d8461c100);
+        
+    
+            var macro_element_210bdca1a079d8c3bfdd7eec28e096ae = L.tileLayer.wms(
+                "https://mandeo.meteogalicia.es/thredds/wms/modelos/wasp/wasp_hist/wasp_hist_best.ncd",
+                {"attribution": "", "elevation": "80.0", "format": "image/png", "layers": "mws", "opacity": 0.6, "styles": "boxfill/rainbow", "time": "2010-01-01T00:00:00Z", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            macro_element_210bdca1a079d8c3bfdd7eec28e096ae.addTo(map_155016a2c5649b757bf9153d8461c100);
+        
+    
+            var macro_element_1a77627f4e7321fc8289b4ab23eb8f59 = L.tileLayer.wms(
+                "https://ideg.xunta.gal/servizos/services/PBA/Afeccions_Enerxia/MapServer/WMSServer",
+                {"attribution": "", "format": "image/png", "layers": "6", "styles": "", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            macro_element_1a77627f4e7321fc8289b4ab23eb8f59.addTo(map_155016a2c5649b757bf9153d8461c100);
+        
+    
+            var layer_control_554ccb19bbd310542347050eb11b991c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_50faf8883b661d0181859864b816a714,
+                },
+                overlays :  {
+                    "Velocidad Media Viento (80m)" : macro_element_210bdca1a079d8c3bfdd7eec28e096ae,
+                    "Parques E\u00f3licos (Existentes)" : macro_element_1a77627f4e7321fc8289b4ab23eb8f59,
+                },
+            };
+            let layer_control_554ccb19bbd310542347050eb11b991c = L.control.layers(
+                layer_control_554ccb19bbd310542347050eb11b991c_layers.base_layers,
+                layer_control_554ccb19bbd310542347050eb11b991c_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_155016a2c5649b757bf9153d8461c100);
+
+        
+</script>
+</html>

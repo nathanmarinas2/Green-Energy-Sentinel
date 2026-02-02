@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d4d767582feca16e580ee33b225a3b10 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d4d767582feca16e580ee33b225a3b10" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d4d767582feca16e580ee33b225a3b10 = L.map(
+                "map_d4d767582feca16e580ee33b225a3b10",
+                {
+                    center: [42.8, -8.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1ba0479fd1dc584fbc4398196b6bc12e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1ba0479fd1dc584fbc4398196b6bc12e.addTo(map_d4d767582feca16e580ee33b225a3b10);
+        
+    
+            var macro_element_7b0e6c52984d83095ff71bd6548d0d45 = L.tileLayer.wms(
+                "https://ideg.xunta.gal/servizos/services/PBA/Afeccions_Enerxia/MapServer/WMSServer",
+                {"attribution": "", "format": "image/png", "layers": "6", "styles": "", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            macro_element_7b0e6c52984d83095ff71bd6548d0d45.addTo(map_d4d767582feca16e580ee33b225a3b10);
+        
+    
+            var macro_element_f41c786db0f3c9409921e5004298830e = L.tileLayer.wms(
+                "https://ideg.xunta.gal/servizos/services/PBA/Afeccions_Enerxia/MapServer/WMSServer",
+                {"attribution": "", "format": "image/png", "layers": "9", "styles": "", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            var layer_control_8344c3c666eb3b4324b75c683d98349e_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_1ba0479fd1dc584fbc4398196b6bc12e,
+                },
+                overlays :  {
+                    "Parques E\u00f3licos (Posici\u00f3n)" : macro_element_7b0e6c52984d83095ff71bd6548d0d45,
+                    "L\u00edneas El\u00e9ctricas" : macro_element_f41c786db0f3c9409921e5004298830e,
+                },
+            };
+            let layer_control_8344c3c666eb3b4324b75c683d98349e = L.control.layers(
+                layer_control_8344c3c666eb3b4324b75c683d98349e_layers.base_layers,
+                layer_control_8344c3c666eb3b4324b75c683d98349e_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_d4d767582feca16e580ee33b225a3b10);
+
+        
+</script>
+</html>
