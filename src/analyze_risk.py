@@ -30,7 +30,7 @@ def fetch_historical_data():
     all_strikes = []
     
     # CACHING LOGIC
-    CACHE_FILE = r"C:\Users\Nathan\Desktop\Universidad\Proyectos\Green_enegry_sentinel\data\strikes_2023.json"
+    CACHE_FILE = os.path.abspath("data/strikes_2023.json")
     if os.path.exists(CACHE_FILE):
         print(f"Loading cached data from {CACHE_FILE}...")
         try:

@@ -99,6 +99,8 @@ def create_dashboard(output_file="maps/sentinel_dashboard.html"):
         features = lightning_data.get('listaRaios', [])
         print(f"Detected {len(features)} lightning strikes.")
         
+        timelapse_features = []
+        
         for strike in features:
             try:
                 lat = float(strike['lat'])
@@ -109,7 +111,7 @@ def create_dashboard(output_file="maps/sentinel_dashboard.html"):
                 # Marker Icon
                 color = 'red' if polarity == 'NEGATIVO' else 'orange'
                 
-                # Add Marker
+                # Add Marker to static group
                 folium.CircleMarker(
                     location=[lat, lon],
                     radius=3,
@@ -129,12 +131,53 @@ def create_dashboard(output_file="maps/sentinel_dashboard.html"):
                     fill_opacity=0.1,
                     popup="Zona de Riesgo Impacto (2km)"
                 ).add_to(risk_group)
+
+                # Prepare feature for TimestampedGeoJson
+                # Ensure timestamp is in a ISO format or compatible string
+                # API usually provides: "2023-10-27T00:54:19"
+                
+                feature = {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [lon, lat],
+                    },
+                    'properties': {
+                        'time': timestamp,
+                        'popup': f"Rayo {polarity} at {timestamp}",
+                        'style': {'color': color},
+                        'icon': 'circle',
+                        'iconstyle': {
+                            'fillColor': color,
+                            'fillOpacity': 0.8,
+                            'stroke': 'true',
+                            'radius': 5
+                        }
+                    }
+                }
+                timelapse_features.append(feature)
                 
             except Exception as e:
                 continue
         
         lightning_group.add_to(m)
         risk_group.add_to(m)
+
+        # Add Timelapse Layer
+        if timelapse_features:
+            print(f"Adding timelapse with {len(timelapse_features)} frames.")
+            plugins.TimestampedGeoJson(
+                {'type': 'FeatureCollection', 'features': timelapse_features},
+                period='PT1H',
+                add_last_point=False,
+                auto_play=True,
+                loop=True,
+                max_speed=10,
+                loop_button=True,
+                date_options='YYYY/MM/DD HH:mm:ss',
+                time_slider_drag_update=True,
+                duration='PT1H' # Show points for 1 hour
+            ).add_to(m)
     
     # Plugins
     folium.LayerControl().add_to(m)
