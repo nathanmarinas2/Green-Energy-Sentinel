@@ -134,9 +134,13 @@ Interactive 3D visualization rendered with PyDeck (deck.gl). Lightning strikes a
 
 This visualization enables spatial pattern recognition across the Iberian Peninsula to calibrate local risk models.
 
-[![Watch 3D Visualization](reports/3d_risk_visualization.png)](reports/video3D.mp4)
-> *Click image to watch the 3D visualization video*
+[![3D Visualization GIF](reports/demo_3d.gif)](reports/video3D.mp4)
+> *Interactive 3D View: Vertical columns represent lightning strikes, with height proportional to intensity (kA).*
 
+### Historical Activity Calendar
+Temporal distribution of lightning strikes across 2023. This GitHub-style heatmap identifies peak storm seasons for maintenance scheduling.
+
+![Lightning Calendar 2023](reports/temporal_activity_heatmap.png)
 
 ### 2D Temporal Activity Timelapse
 Animated 2D timelapse showing the evolution of lightning strikes across Galicia throughout 2023.
@@ -145,8 +149,8 @@ Animated 2D timelapse showing the evolution of lightning strikes across Galicia 
 - **Context**: Overlaid on the wind resource map to correlate weather events with potential wind energy sites.
 - **Features**: Interactive time-slider controls and playback speed adjustment.
 
-[![Watch Timelapse](reports/temporal_activity_heatmap.png)](reports/timelapse_rayos.mp4)
-> *Click image to watch the 2D Timelapse animation*
+[![Timelapse GIF](reports/demo_timelapse.gif)](reports/timelapse_rayos.mp4)
+> *2D Temporal Animation (Click for Full Quality)*
 
 
 ---
