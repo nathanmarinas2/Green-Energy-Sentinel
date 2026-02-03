@@ -127,12 +127,8 @@ Mapa de calor interactivo que muestra la puntuación final de idoneidad en Galic
 ### Análisis de Densidad Espacial 3D
 Visualización 3D a gran escala de la intensidad de rayos en la Península Ibérica, utilizada para calibrar la superficie de riesgo del modelo local.
 
-![Visualización 3D](reports/3d_risk_visualization.png)
-
-<video width="100%" controls>
-  <source src="reports/video3D.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de videos.
-</video>
+[![Ver Visualización 3D](reports/3d_risk_visualization.png)](reports/video3D.mp4)
+> *Haz clic en la imagen para ver el video de la visualización 3D*
 
 
 ### Timelapse de Actividad Temporal 2D
@@ -142,12 +138,8 @@ Timelapse animado en 2D que muestra la evolución de los rayos en Galicia a lo l
 - **Contexto**: Superpuesto sobre el mapa de recurso eólico para correlacionar eventos climáticos.
 - **Funcionalidades**: Control deslizante de tiempo interactivo y ajuste de velocidad.
 
-![Calendario de Rayos](reports/temporal_activity_heatmap.png)
-
-<video width="100%" controls>
-  <source src="reports/timelapse_rayos.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de videos.
-</video>
+[![Ver Timelapse 2D](reports/temporal_activity_heatmap.png)](reports/timelapse_rayos.mp4)
+> *Haz clic en la imagen para ver la animación Timelapse 2D*
 
 
 ---
