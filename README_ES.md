@@ -128,11 +128,15 @@ Mapa de calor interactivo que muestra la puntuación final de idoneidad en Galic
 Visualización 3D a gran escala de la intensidad de rayos en la Península Ibérica, utilizada para calibrar la superficie de riesgo del modelo local.
 
 ![Visualización 3D](reports/3d_risk_visualization.png)
+> **[▶️ Ver Video de la Visualización 3D](reports/video3D.mp4)**
+
 
 ### Calendario de Actividad Histórica
 Distribución temporal de rayos durante 2023. Este mapa de calor tipo GitHub identifica temporadas de tormenta pico para programación de mantenimiento.
 
 ![Calendario de Rayos](reports/temporal_activity_heatmap.png)
+> **[▶️ Ver Timelapse de Rayos](reports/timelapse_rayos.mp4)**
+
 
 ---
 
@@ -148,7 +152,9 @@ Distribución temporal de rayos durante 2023. Este mapa de calor tipo GitHub ide
 ├── reports/                    # Activos generados (imágenes, CSVs)
 │   ├── suitability_map_preview.png
 │   ├── 3d_risk_visualization.png
-│   └── temporal_activity_heatmap.png
+│   ├── temporal_activity_heatmap.png
+│   ├── video3D.mp4
+│   └── timelapse_rayos.mp4
 ├── src/                        
 │   ├── optimal_placement.py    # Algoritmo principal
 │   ├── visualize_3d.py         # Renderizado 3D con PyDeck

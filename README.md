@@ -129,11 +129,15 @@ Interactive heatmap showing the final suitability score across Galicia. Numerals
 Large-scale 3D visualization of lightning strike intensity across the Iberian Peninsula, used to calibrate the risk surface for the local Galician model.
 
 ![3D Lightning Visualization](reports/3d_risk_visualization.png)
+> **[▶️ Watch 3D Visualization Video](reports/video3D.mp4)**
+
 
 ### Historical Activity Calendar
 Temporal distribution of lightning strikes across 2023. This GitHub-style heatmap identifies peak storm seasons for maintenance scheduling and risk assessment.
 
 ![Lightning Calendar 2023](reports/temporal_activity_heatmap.png)
+> **[▶️ Watch Lightning Timelapse](reports/timelapse_rayos.mp4)**
+
 
 ---
 
@@ -149,7 +153,9 @@ Temporal distribution of lightning strikes across 2023. This GitHub-style heatma
 ├── reports/                    # Generated Assets
 │   ├── suitability_map_preview.png
 │   ├── 3d_risk_visualization.png
-│   └── temporal_activity_heatmap.png
+│   ├── temporal_activity_heatmap.png
+│   ├── video3D.mp4
+│   └── timelapse_rayos.mp4
 ├── src/                        
 │   ├── optimal_placement.py    # Primary Suitability Algorithm
 │   ├── visualize_3d.py         # PyDeck 3D Rendering
