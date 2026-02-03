@@ -128,14 +128,26 @@ Mapa de calor interactivo que muestra la puntuación final de idoneidad en Galic
 Visualización 3D a gran escala de la intensidad de rayos en la Península Ibérica, utilizada para calibrar la superficie de riesgo del modelo local.
 
 ![Visualización 3D](reports/3d_risk_visualization.png)
-> **[▶️ Ver Video de la Visualización 3D](reports/video3D.mp4)**
+
+<video width="100%" controls>
+  <source src="reports/video3D.mp4" type="video/mp4">
+  Tu navegador no soporta la reproducción de videos.
+</video>
 
 
-### Calendario de Actividad Histórica
-Distribución temporal de rayos durante 2023. Este mapa de calor tipo GitHub identifica temporadas de tormenta pico para programación de mantenimiento.
+### Timelapse de Actividad Temporal 2D
+Timelapse animado en 2D que muestra la evolución de los rayos en Galicia a lo largo de 2023.
+- **Visualización**: Mapa 2D con marcadores animados que reaccionan al tiempo.
+- **Dinámica**: Muestra la progresión temporal de tormentas e identifica periodos pico.
+- **Contexto**: Superpuesto sobre el mapa de recurso eólico para correlacionar eventos climáticos.
+- **Funcionalidades**: Control deslizante de tiempo interactivo y ajuste de velocidad.
 
 ![Calendario de Rayos](reports/temporal_activity_heatmap.png)
-> **[▶️ Ver Timelapse de Rayos](reports/timelapse_rayos.mp4)**
+
+<video width="100%" controls>
+  <source src="reports/timelapse_rayos.mp4" type="video/mp4">
+  Tu navegador no soporta la reproducción de videos.
+</video>
 
 
 ---

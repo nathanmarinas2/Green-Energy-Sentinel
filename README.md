@@ -126,17 +126,35 @@ Interactive heatmap showing the final suitability score across Galicia. Numerals
 ![Suitability Map](reports/suitability_map_preview.png)
 
 ### 3D Spatial Density Analysis
-Large-scale 3D visualization of lightning strike intensity across the Iberian Peninsula, used to calibrate the risk surface for the local Galician model.
+Interactive 3D visualization rendered with PyDeck (deck.gl). Lightning strikes are displayed as vertical columns where:
+- **Height**: Proportional to peak current intensity (kA) with 1kA = 100m elevation
+- **Color**: Red for negative polarity strikes, Gold for positive polarity
+- **Base Layer**: Heatmap showing density distribution with 30px radius kernel
+- **View**: 55° pitch angle over Galicia with interactive rotation and zoom controls
+
+This visualization enables spatial pattern recognition across the Iberian Peninsula to calibrate local risk models.
 
 ![3D Lightning Visualization](reports/3d_risk_visualization.png)
-> **[▶️ Watch 3D Visualization Video](reports/video3D.mp4)**
+
+<video width="100%" controls>
+  <source src="reports/video3D.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
-### Historical Activity Calendar
-Temporal distribution of lightning strikes across 2023. This GitHub-style heatmap identifies peak storm seasons for maintenance scheduling and risk assessment.
+### 2D Temporal Activity Timelapse
+Animated 2D timelapse showing the evolution of lightning strikes across Galicia throughout 2023.
+- **Visualization**: 2D Map with animated markers reacting to time.
+- **Dynamics**: Shows the temporal progression of storms, highlighting peak activity periods.
+- **Context**: Overlaid on the wind resource map to correlate weather events with potential wind energy sites.
+- **Features**: Interactive time-slider controls and playback speed adjustment.
 
 ![Lightning Calendar 2023](reports/temporal_activity_heatmap.png)
-> **[▶️ Watch Lightning Timelapse](reports/timelapse_rayos.mp4)**
+
+<video width="100%" controls>
+  <source src="reports/timelapse_rayos.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ---
